@@ -54,62 +54,46 @@ video{
 
 #somos{
 	width:100%;
-	background:rgb(250,250,250);
+	background:rgb(255,250,255);
 	margin-bottom:2%;
 	}
 
 .dupla{
-	width:46%;
+	width:96%;
 	padding:2%;
+	height:auto;
 	float:left;
 	background-color:red;
 	}
 
 .dupla a{
-	color:rgba(255,0,0,0.75);
+	color:rgba(90,200,230,0.75);
 	text-decoration:none;
 	font-weight:700;
 }
 
 .dupla a:hover{
-	color:rgba(255,0,0,1);
+	color:rgba(100,210,230,1);
 	text-decoration:underline;
 }
 
 .primera{
 	min-height:300px;
 	text-align:left;
-	background-color:rgba(241,230,210,1);
-	background-image:url('../images/dupla-primera.jpg');
+	background-color:rgba(40,40,40,1);
+	background-image:url('../images/yo.jpg');
 	background-position:top right;
 	background-repeat:no-repeat;
 	background-size:auto 100%;
 }
-.primera h4{padding: 2% 40% 1% 2%;}
+.primera h4{padding: 1.5% 40% 1% 2%; color:rgba(250,250,250,1)}
 
-.primera h5{padding: 1% 40% 2% 2%; margin-bottom:5em; letter-spacing:0.1em;}
+.primera h5{padding: 1.5% 40% 2% 2%; margin-bottom:5em; color:rgba(250,250,250,1); letter-spacing:0.1em;}
 
-.primera p{padding: 2% 40% 2% 2%;}
+.primera p{padding: 1.5% 50% 2% 2%; color:rgba(250,250,250,1)}
 
 .primera address{padding: 2% 40% 2% 2%; font-size:0.9em; font-style:normal;}
 
-.segunda{
-	min-height:300px;
-	text-align:right;
-	background-color:rgba(231,240,239,1);
-	background-image:url('../images/dupla-segunda.jpg');
-	background-position:top left;
-	background-repeat:no-repeat;
-	background-size:auto 100%;
-}
-
-.segunda h4{padding: 2% 2% 1% 40%;}
-
-.segunda h5{padding: 1% 2% 2% 40%; margin-bottom:5em; letter-spacing:0.1em;}
-
-.segunda p{padding: 2% 2% 2% 40%;}
-
-.segunda address{padding: 2% 2% 2% 40%; font-size:0.9em; font-style:normal;}
 
 #somos hr{
 	clear:both;
@@ -159,17 +143,18 @@ video{
 
 .item figure img{width:100%; height:auto; margin-bottom:-4px;}
 
-.item:hover{cursor:crosshair;}
-
-.item:hover figure img{
-	-webkit-transform:scale(1.5);
-	-moz-transform:scale(1.5);
-	-ms-transform:scale(1.5);
-	transform:scale(1.5);
-	-webkit-transition:-webkit-transform ease-out 1s;
-	-moz-transition:-moz-transform ease-out 1s;
-	-ms-transition:-ms-transform ease-out 1s;
-	transition:transform ease-out 1s;
+.item img {
+  filter: url(filters.svg#grayscale);
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome & Safari 6+ */
+}
+img:hover {
+  filter: none;
+  -webkit-filter: none;
+}
 }
 
 .item h4{
@@ -186,6 +171,7 @@ video{
 
 footer{
 	width:100%;
+	background-color: black;
 	padding:3em 0 1em 0;
 	text-align:center;
 }
@@ -193,12 +179,14 @@ footer{
 footer p{
 	text-transform:uppercase;
 	letter-spacing:0.1em;
+	color:rgba(245,245,245,1);
 	font-size:0.9em;
 	}
 
 footer hr{
 	border:2px solid #000;
 	width:10%;
+	color:rgba(245,245,245,1);
 	margin:2em auto 0 auto;
 	}
 
